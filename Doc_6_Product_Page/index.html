@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Product Page LORI-LORI</title>
+      <link rel="stylesheet" href="main.css">
+      <!-- JS links -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+      <!-- Link for cart & social icon images-->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- BEGIN CONTAINER -->
+
+    <!-- Dividing left & right part of the page -->
+      <div class="container">
+            <div class="left"></div>
+            <div class="right"></div>
+
+            <!-- NAV BAR -->
+            <div class="nav">
+                  <div class="logo"><img src="images/Logo.png" alt="" class="logo-image"></div>
+
+                  <div class="cart"><i class="fa fa-shopping-cart"></i></div>
+            </div>
+
+            <!-- RIGHT SIDE TEXT -->
+            <div class="right-sidebar">
+                  <ul>
+                        <li class="title">SHOP</li>
+                        <li class="item-1">Necklaces</li>
+                        <li class="item-2">Bracelets</li>
+                        <li class="item-3">Rings</li>
+                        <li class="item-4">Earrings</li>
+                        <li class="item-5">Shop All</li>
+                  </ul>
+
+            </div>
+
+            <!-- QUOTE LORI -->
+            <div class="left-bottom">
+                  <p>Jewelry To Feel Powerful In</p>
+            </div>
+
+            <!-- PRODUCT INFORMATION -->
+            <div class="left-sidebar">
+                  <h1 class="product-title">Disco Doll Ring</h1>
+
+                  <p class="product-description">Ring-a-ling b*tches. Pay attention to the Disco Doll ring. Put on this ring, have fun, look hot and be even more fabulous than you were 5 minutes ago.</p>
+
+                  <p id="price"> EUR €29</p>
+
+                  <button class="btn">ADD TO CART</button>
+
+            </div>
+            <!-- PRODUCT PHOTO -->
+            <div class="product" id="product">
+                  <img src="images/Disco Doll Ring-min kopie.png" alt="ring" class="product-image">
+            </div>
+
+            <!-- SOCIAL ICONS -->
+            <div class="media">
+                  <ul>
+                        <li><i class="fa fa-facebook"></i></li>
+                        <li><i class="fa fa-instagram"></i></li>
+                        <li><i class="fa fa-twitter"></i></li>
+                  </ul>
+            </div>
+
+      </div>
+      <!-- END CONTAINER -->
+
+
+<!-- GSAP ANIMATIONS -->      
+      <script type="text/javascript">
+
+      // slide in background image right
+      TweenMax.from(".right",
+            // duration of animation
+            1.6, {
+            // duration of animation start
+           delay: 0.6,
+           width: 0,
+           // ease of animation
+           ease: Expo.easeInOut
+     });
+
+     // logo upper left slide in
+      TweenMax.from(".logo-image", 
+            // duration of animation
+            1, {
+            // duration of animation start
+            delay: 1,
+            // becoming slightly more visible
+            opacity: 0,
+            x: -20,
+            // ease of animation
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".cart", 1, {
+            delay: 1.6,
+            opacity: 0,
+            x: -20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".product-title", 2, {
+            delay: 1.6,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".product-description", 2, {
+            delay: 1.8,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from("#price", 2, {
+            delay: 2,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.from(".btn", 2, {
+            delay: 2.2,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.staggerFrom(".right-sidebar ul li",
+            // length in seconds until effect is finished
+            1, {
+            // duration of animation start
+            delay: 2.6,
+            // becoming slightly more visible
+            opacity: 0,
+            // vertical height slide in
+            y: 20,
+            ease: Power3.easeInOut
+            }, 
+            // delay between each menu title
+            0.08);
+
+      TweenMax.from(".left-bottom", 2, {
+            delay: 2.8,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.staggerFrom(".media ul li", 1, {
+            delay: 3.6,
+            opacity: 0,
+            // vertical height slide in
+            y: 20,
+            ease: Power3.easeInOut
+            }, 
+            // delay between each social icon
+            0.08);
+      
+      // ring animation slide in and fly
+      TweenMax.from(".product img", 2, {
+            delay: 2,
+            scale: 0,
+            ease: Expo.easeInOut
+      });
+
+      TweenMax.to(".product img", 3, {
+            delay: 2,
+            scale: 1,
+            ease: Expo.easeInOut
+      });
+
+      </script>
+</body>
+</html>

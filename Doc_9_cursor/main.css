@@ -1,0 +1,310 @@
+/* BEGIN CSS RESET */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* END CSS RESET */
+
+
+/* BEGIN FONT LINKS */
+@font-face {
+	font-family: "PoppinsHeavy";
+	src: url(fonts/Poppins-Black.ttf);
+  }
+
+@font-face {
+	font-family: "PoppinsRegular";
+	src: url(fonts/Poppins-Regular.ttf);
+  }  
+
+@font-face {
+	font-family: "PoppinsLight";
+	src: url(fonts/Poppins-Light.ttf);
+  }
+
+@font-face {
+	font-family: "PoppinsBold";
+	src: url(fonts/Poppins-Bold.ttf);
+  }
+/* END FONT LINKS */
+
+body{
+	margin: 0;
+	height: 100vh;
+	cursor: url('images/pearl-svgrepo-com\ \(3\).svg'), auto;
+	background: rgb(255, 255, 255)
+}
+
+/* BEGIN CURSOR */
+.cursor {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+	z-index: 100;
+    pointer-events: none;
+}
+
+/* END CURSOR */
+
+/* BEGIN  MARQUEE */
+.marquee{
+	background-color: #fda4d6;
+	white-space: nowrap;
+	overflow: hidden;
+	height: 45px;
+	vertical-align: center;
+}
+
+  .marquee .container-marq{
+	font-size: 3rem;
+	font-family: 'PoppinsBold';
+	color: white;
+	font-size: 9pt;
+	animation: marqueebar 20s linear infinite;
+	padding-left: 100%;
+	display: inline-block;
+	padding-top: 18px;
+	justify-content: space-between;
+}
+
+.marquee h1{
+	display: inline-block;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+@keyframes marqueebar{
+	100%{
+		transform: translate(-50%, 0);
+	}
+}
+/* END MARQUEE */
+
+/* BEGIN ANNOBAR */
+#annobar{
+	background-color: #fda4d6;
+}
+
+#annobar > ul{
+	text-align: center;
+}
+
+#annobar > ul > a{
+	display: inline-block;
+	padding: 17px;
+	font-family: 'PoppinsBold';
+	text-decoration: none;
+}
+
+#annobar > ul > a > li{
+	color: white;
+	font-size: 9pt;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+/* END ANNOBAR */
+
+
+/* BEGIN MAIN NAVIGATION */
+#main-nav-desktop{
+  background-color: white;
+  width: 100%;
+}
+
+.logo-nav{
+  width: 45%;
+  padding-left: 30px;
+}
+
+.nav-container-1, .nav-container-3{
+	width: 20%;
+}
+.nav-container-2{
+	text-align: center;
+	width: 54%;
+}
+
+.nav-container-2 > a > li{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.nav-container-3{
+	text-align: right;
+	padding-right: 20px;
+}
+
+.nav-container-3 > a > li > img{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.nav-container-1, .nav-container-2, .nav-container-3{
+  margin-left: 5px;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#main-nav-desktop > ul > a{
+  display: inline-block;
+/* hier stond eerst en padding van 10 px */
+  font-family: 'PoppinsBold';
+  text-decoration: none;
+}
+
+#main-nav-desktop > ul > a > li{
+	color: black;
+	font-size: 9pt;
+}
+#main-nav-desktop > ul > a > li:hover{
+	color: #545454;
+	transition: all 0.3s ease-in-out;
+}
+
+.search-icon{
+	width: 22px;
+}
+
+.user-icon{
+	width: 25px;
+}
+
+.heart-icon{
+	width: 22px;
+}
+
+.shopping-icon{
+	width: 22px;
+}
+/* END MAIN NAVIGATION */
+
+/* BEGIN HERO BANNER */
+.hero-banner{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	background-image: url(images/Banner_Image.jpg.webp);
+	filter: brightness(100%);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+	width: 100%;
+	height: 600px;
+}
+
+.text-hero-banner{
+	color: white;
+	text-align: center;
+	width: 50%;
+	margin-top: 200px;
+}
+
+.title-hero{
+	font-family: 'PoppinsHeavy';
+	font-size: 40pt;
+	padding-bottom: 25px;
+}
+
+.under-title-hero{
+	font-family: 'PoppinsHeavy';
+	font-size: 10pt;
+	transform: translateY(400px);
+}
+
+.button-hero{
+	margin-bottom: 30px;
+	border-radius: 5px;
+	background: none;
+	background-color: #fda4d6;
+	border: none;
+	color: white;
+	font-family: 'PoppinsHeavy';
+	width: 180px;
+	height: 50px;
+	transform: translateY(400px);
+}
+
+.button-hero:hover{
+	opacity: 70%;
+}
+/* END HERO BANNER */
+
+/* BEGIN PEARL DROP */
+.pearlOne,
+.pearlTwo,
+.pearlThree,
+.pearlFour,
+.pearlFive,
+.pearlSix{
+    width: 4%;
+}
+
+.pearlTwo{
+    padding-left: 30px;
+}
+
+.pearlFour{
+    padding-left: 10px;
+}
+
+.pearl-images{
+    padding-left: 30px;
+	z-index: 100;
+	position: absolute;
+}
+/* END PEARL DROP */
+
+.seen-in-banner{
+	width: 100%;
+}
+
+
+
