@@ -1,0 +1,36 @@
+header{
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+h1{
+  font-size: 7rem;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  /* Making sure the text animation is hidden partly */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  /* Less space between the text */
+  line-height: 5.9pm;
+}
+
+.char{
+  /* Original height of text before animation */
+  transform: translateY(115px);
+  /* Duration of animation */
+  transition: transform .5s; 
+}
+
+body {
+  background-color: black;
+  color: white;
+  padding:30px;
+  
+}
+
+#test {
+  font-size: 3em;
+  text-align: right;
+  width: 850px;
+  color: white;
+}

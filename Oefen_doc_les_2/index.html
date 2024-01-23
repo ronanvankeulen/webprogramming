@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- JS links -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+</head>
+<body>
+
+    <!-- Teksten -->
+<h1 class="anim1">HELLO</h1>
+<h1 class="anim2">HELLO</h1>
+<h1 class="anim3">HELLO</h1>
+ 
+</body>
+
+<script>
+    $(document).ready(function(){
+
+// GLOBAL VARS
+
+// tijdlijn
+var klok = gsap.timeline({
+    // oneindig
+    repeat: -1, 
+    // herhaling van animatie na X seconden
+    repeatDelay: 3, 
+    // animatie begint niet opnieuw, maar bouncet weer terug
+    yoyo:true
+});
+
+// GSAP CODE    
+        console.log("ready");
+        klok.to (".anim1", 3, {
+            // animatie heeft bounce
+            ease: "bounce.out",
+            // animatie verplaatst op de X as
+            x: 300})
+        klok.to (".anim2", {
+            // animatie verplaatst op de X as
+            x: 400},
+            // animatie begint na X seconden
+            2)
+        klok.to (".anim3", {
+             // animatie verplaatst op de X as
+            x: 400},
+             // animatie begint na X seconden
+            3)
+    });
+</script>
+</html>

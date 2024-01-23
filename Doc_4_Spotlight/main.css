@@ -1,0 +1,90 @@
+/* BEGIN FONT LINKS */
+@font-face {
+	font-family: "PoppinsHeavy";
+	src: url(fonts/Poppins-Black.ttf);
+  }
+
+@font-face {
+	font-family: "PoppinsRegular";
+	src: url(fonts/Poppins-Regular.ttf);
+  }  
+
+@font-face {
+	font-family: "PoppinsLight";
+	src: url(fonts/Poppins-Light.ttf);
+  }
+
+@font-face {
+	font-family: "PoppinsBold";
+	src: url(fonts/Poppins-Bold.ttf);
+  }
+/* END FONT LINKS */
+
+body {
+  height: 100vh;
+  background: url(images/Background-1.png);  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  height: 110vh; 
+  padding-left: 35px;
+
+  h1 {
+      font-size: 5rem;
+      font-family: 'PoppinsHeavy';
+      font-size: 90pt;
+      text-indent: 10pt;
+  }
+}
+
+.ss24{
+  color: #fda4d6;
+  text-shadow: 2px 2px 8px white;
+}
+
+.explorehome{
+  text-shadow: 2px 2px 8px #fda4d6;
+}
+
+.overlay {
+  background: url(images/Background-2.png);
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-size: auto;
+/* cut out */
+  clip-path: circle(100px at var(--x, 50%) var(--y, 50%));
+/* speed of transition when you click on it */
+  transition: clip-path 100ms;
+}
+
+/* button from Figma */ 
+span {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fda4d6;
+  display: flex;
+  cursor: pointer;
+}
+
+svg {
+  margin: 1em;
+  fill: white;
+}
+
+/* animation when the circle goes open*/
+.is-open {
+  /* final width of transition */
+  clip-path: circle(200% at 100% 100%);
+  /* speed of transition */
+  transition: clip-path 1.3s;
+  /* ease of transition */
+  transition-timing-function: cubic-bezier(1,-0.01,.01,.99);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- JS links -->
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+    <!-- Main text-->
+    <header>
+        <h1 id="my-text">LORI-LORI</h1>
+    </header>
+
+   <!-- GSAP animations-->
+    <script>
+        const myText = new SplitType('#my-text')
+
+        gsap.to('.char', {
+            // vertical height
+            y: 0,
+            // time between each letter
+            stagger: 0.05,
+            // time before animation starts playing
+            delay: 0.2,
+            // time of animation in total
+            duration: .1
+        })
+    </script>
+
+
+</body>
+</html>
